@@ -7,6 +7,7 @@ RUN npm run build
 # build in react
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # front-end static
 
